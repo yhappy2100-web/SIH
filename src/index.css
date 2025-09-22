@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-punjab-gradient text-gray-800;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-punjab hover:shadow-warm transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-800 font-semibold py-3 px-6 rounded-xl transition-all duration-300 border-2 border-secondary-200 hover:border-secondary-300;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-600 hover:bg-primary-500 hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl shadow-punjab border border-white/20 p-6 hover:shadow-warm transition-all duration-300;
+  }
+
+  .card-punjab {
+    @apply bg-gradient-to-br from-punjab-yellow-50 to-punjab-green-50 rounded-2xl shadow-punjab border border-punjab-yellow-200 p-6;
+  }
+
+  .nav-link {
+    @apply flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:scale-105;
+  }
+
+  .nav-link-active {
+    @apply bg-primary-100 text-primary-700 shadow-punjab;
+  }
+
+  .nav-link-inactive {
+    @apply text-gray-600 hover:text-primary-600 hover:bg-primary-50;
+  }
+
+  .punjab-text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+
+  .punjab-border-gradient {
+    @apply border-2 border-transparent bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-border;
+  }
+
+  .section-padding {
+    @apply py-16 px-4;
+  }
+
+  .container-punjab {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-br from-punjab-yellow-100 via-punjab-green-50 to-punjab-yellow-50;
+  }
+
+  .feature-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl shadow-punjab border border-punjab-yellow-200 p-8 hover:shadow-warm transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .stats-card {
+    @apply bg-gradient-to-br from-punjab-yellow-50 to-punjab-green-50 rounded-2xl shadow-punjab border border-punjab-yellow-200 p-6 text-center;
+  }
+}
